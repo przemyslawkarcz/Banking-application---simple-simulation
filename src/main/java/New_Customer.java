@@ -4,7 +4,6 @@ public class New_Customer {
 
     String [] customer_data;
 
-
     public String[] getCustomer_data() {
         return customer_data;
     }
@@ -13,7 +12,7 @@ public class New_Customer {
         this.customer_data = customer_data;
     }
 
-    public String[] add_new_customer (String id, String full_name){
+    public void add_new_customer (String id, String full_name){
 
         String [] tab = new String[]{id, full_name, null, null, null};
 
@@ -22,8 +21,6 @@ public class New_Customer {
         for (String s:customer_data) {
             System.out.print(s + " | ");
         }
-
-        return customer_data;
 
     }
 

@@ -5,11 +5,9 @@ public class Bank {
     public void add_new_customer_to_list_of_bank(){
 
         New_Customer new_customer = new New_Customer();
-        String[] customer_data = new_customer.getCustomer_data();
+        System.out.println(new_customer.getCustomer_data());
 
-        for (String s:customer_data) {
-            System.out.print(s + ", ");
-        }
+        //xxxxxxxxxxxxxxxxxxxxxxxxx
 
     }
 
