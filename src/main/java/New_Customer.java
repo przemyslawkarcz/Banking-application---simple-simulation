@@ -2,7 +2,7 @@ import com.sun.security.auth.UnixNumericGroupPrincipal;
 
 public class New_Customer {
 
-    String [] customer_data;
+    static String [] customer_data;
 
     public String[] getCustomer_data() {
         return customer_data;
@@ -14,13 +14,18 @@ public class New_Customer {
 
     public void add_new_customer (String id, String full_name){
 
-        String [] tab = new String[]{id, full_name, null, null, null};
+        String fill_in_account_details = "fill in account details";
+        String funds_in_the_account = "funds in the account";
+        String other_data = "other_data";
+
+        String [] tab = new String[]{id, full_name, fill_in_account_details, funds_in_the_account, other_data};
 
         setCustomer_data(tab);
 
         for (String s:customer_data) {
             System.out.print(s + " | ");
         }
+
 
     }
 
