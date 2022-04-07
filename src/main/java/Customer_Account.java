@@ -4,14 +4,10 @@ import java.util.Iterator;
 
 public class Customer_Account {
 
-    public void assign_customer_to_account (String id_bank){
+    public void assign_customer_to_account (String customer_id){
 
         New_Customer new_customer = new New_Customer();
         New_Account new_account = new New_Account();
-
-
-
-
 
     }
 
@@ -19,32 +15,73 @@ public class Customer_Account {
 
         ArrayList<Object> list_of_all_bank_customers = Bank.list_of_all_bank_customers;
 
+        String [] next;
+
+        String id;
+        String full_name;
+        String account_no = null;
+        String funds;
+        String other;
+
         Iterator<Object> iterator = list_of_all_bank_customers.iterator();
         while (iterator.hasNext()){
-            String[] next = (String[]) iterator.next();
+            next = (String[]) iterator.next();
 
-            //System.out.println("Find: ");
+            id = next[0];
+            full_name = next[1];
+            account_no = next[2];
+            funds = next[3];
+            other = next[4];
 
-            String index_0 = next[0];
-            String index_1 = next[1];
-            String index_2 = next[2];
-            String index_3 = next[3];
-            String index_4 = next[4];
-            //System.out.println("index 0: " + index_0);
+            if (id.equalsIgnoreCase(customer_id)){
 
-            if (index_0.equalsIgnoreCase(customer_id)){
+                System.out.println("ID: " + id);
+                System.out.println("Full name: " + full_name);
+                System.out.println("Account No.: " + account_no);
+                System.out.println("Funds: " + funds);
+                System.out.println("Other: " + other);
 
-                System.out.println("ID: " + index_0);
-                System.out.println("Full name: " + index_1);
-                System.out.println("Account No.: " + index_2);
-                System.out.println("Funds: " + index_3);
-                System.out.println("Other: " + index_4);
-                //System.out.println("There is no such client in the database.");
-
-            }//xxxxxxxxxxxxxxxxxxxxx tu skończyłem
+            }
 
         }
 
+    }
+
+    public String find_customer_and_assign_account(String customer_id){
+
+        ArrayList<Object> list_of_all_bank_customers = Bank.list_of_all_bank_customers;
+
+        String [] next;
+
+        String id;
+        String full_name;
+        String account_no = null;
+        String funds;
+        String other;
+
+        Iterator<Object> iterator = list_of_all_bank_customers.iterator();
+        while (iterator.hasNext()){
+            next = (String[]) iterator.next();
+
+            id = next[0];
+            full_name = next[1];
+            account_no = next[2];
+            funds = next[3];
+            other = next[4];
+
+            if (id.equalsIgnoreCase(customer_id)){
+
+                System.out.println("ID: " + id);
+                System.out.println("Full name: " + full_name);
+                System.out.println("Account No.: " + account_no);
+                System.out.println("Funds: " + funds);
+                System.out.println("Other: " + other);
+
+            }
+
+        }
+
+        return account_no;
 
     }
 
