@@ -8,7 +8,7 @@ public class New_Customer {
     }
 
     public void setCustomer_data(String[] customer_data) {
-        this.customer_data = customer_data;
+        New_Customer.customer_data = customer_data;
     }
 
     public void add_new_customer (String id, String full_name){

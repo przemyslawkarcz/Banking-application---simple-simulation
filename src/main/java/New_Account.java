@@ -25,10 +25,6 @@ public class New_Account {
         System.out.println("New account registered not assigned to customer: " + account_number);
 
         return account_number;
-        /*Customer_Account customer_account = new Customer_Account();
-        String account = customer_account.find_customer_and_assign_account(customer_id);
-        System.out.println("account: " + account);
-        */
 
     }
 

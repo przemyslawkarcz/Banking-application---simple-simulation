@@ -35,7 +35,8 @@ public class Main {
         customer_account.find_customer_and_create_account_for_customer("4", "4004");
         customer_account.find_customer_and_create_account_for_customer("5", "5005");
 
-        
+        //tu skończyłem, należy teraz każde konto zasilić jakąś kwotą
+
         /*// 2. creating new account for new customer
         New_Account new_account = new New_Account();
         new_account.create_account_number("1001", "1");
