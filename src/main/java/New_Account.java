@@ -17,17 +17,18 @@ public class New_Account {
                 '}';
     }
 
-    public void create_account_number(String account_No, String customer_id){
+    public String create_account_number(String account_No){
 
         setAccount_number(account_No);
 
         String account_number = getAccount_number();
-        System.out.println("\n" + account_number);
+        System.out.println("New account registered not assigned to customer: " + account_number);
 
-        Customer_Account customer_account = new Customer_Account();
+        return account_number;
+        /*Customer_Account customer_account = new Customer_Account();
         String account = customer_account.find_customer_and_assign_account(customer_id);
         System.out.println("account: " + account);
-
+        */
 
     }
 

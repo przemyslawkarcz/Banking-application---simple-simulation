@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.ListIterator;
 
 public class Bank {
 
@@ -14,7 +13,7 @@ public class Bank {
 
         //list_of_all_bank_customers = new String[][]{data};
 
-        System.out.println("List of all customers: ");
+        System.out.println("\nList of all customers: ");
         /*for (String [] strings:list_of_all_bank_customers) {
             for (String s:strings) {
                 System.out.print(s + ", ");
@@ -34,9 +33,9 @@ public class Bank {
                 System.out.print(s + ", ");
             }
 
-            String index_0 = next[0];
-            System.out.println("index 0: " + index_0);
-
+            //String index_0 = next[0];
+            //System.out.println("index 0: " + index_0);
+            System.out.println();
         }
 
     }

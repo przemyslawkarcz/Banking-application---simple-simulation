@@ -1,4 +1,3 @@
-import com.sun.security.auth.UnixNumericGroupPrincipal;
 
 public class New_Customer {
 
@@ -22,10 +21,11 @@ public class New_Customer {
 
         setCustomer_data(tab);
 
+        System.out.println();
         for (String s:customer_data) {
             System.out.print(s + " | ");
         }
-
+        System.out.println();
 
     }
 
