@@ -30,18 +30,19 @@ public class Main {
         customer_bank.find_customer("5");
 
         // 5. customers deposit funds into their accounts, see printout 'List of customers and funds in the accounts'
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_on_account("1", "1000000");
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_on_account("2", "2000000");
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_on_account("3", "3000000");
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_on_account("4", "4000000");
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_on_account("5", "5000000");
+        customer_bank.find_customer_and_perform_operation_deposit_on_account("1", "1000000");
+        customer_bank.find_customer_and_perform_operation_deposit_on_account("2", "2000000");
+        customer_bank.find_customer_and_perform_operation_deposit_on_account("3", "3000000");
+        customer_bank.find_customer_and_perform_operation_deposit_on_account("4", "4000000");
+        customer_bank.find_customer_and_perform_operation_deposit_on_account("5", "5000000");
 
         // 6. we randomly check the bank's customers again, see printout 'Customers Database'
         customer_bank.find_customer("3");
         customer_bank.find_customer("1");
         customer_bank.find_customer("5");
 
-
+        //
+        //customer_bank.make_transfer_operation_between_customers("5", "", "");
     }
 
 }

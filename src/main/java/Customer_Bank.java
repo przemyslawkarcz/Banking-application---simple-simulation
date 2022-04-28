@@ -62,7 +62,7 @@ public class Customer_Bank {
 
     }
 
-    public void find_customer_and_perform_operation_deposit_withdrawal_on_account(String id, String funds){
+    public void find_customer_and_perform_operation_deposit_on_account(String id, String funds){
 
         System.out.println("\n* * * List of customers and funds in the accounts * * *");
 
@@ -101,16 +101,11 @@ public class Customer_Bank {
 
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
-        Customer customer_ = new Customer();
-        customer_.setAccount_funds(funds);
-
         Iterator<Object> iterator = bank_customer_list.iterator();
         while (iterator.hasNext()){
             String [] next = (String []) iterator.next();
 
             if (next[0].equals(id_client_ordering_transfer)){
-
-                next[3] = customer_.getAccount_funds();
 
                 System.out.println(
                         "Customer: " +
