@@ -1,60 +1,35 @@
-import java.util.Map;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        New_Customer new_customer = new New_Customer();
-        Bank bank = new Bank();
-        Customer_Account customer_account = new Customer_Account();
-        New_Account new_account = new New_Account();
+        // 1. creating new customers of bank and adding them to bank's list of customers,
+        // we find the printouts on the 'List of all bank customers'
+        Customer customer_ = new Customer();
+        customer_.add_new_customer("1", "F. First");
+        customer_.add_new_customer("2", "S. Second");
+        customer_.add_new_customer("3", "T. Third");
+        customer_.add_new_customer("4", "Fo. Fourth");
+        customer_.add_new_customer("5", "Fi. Fifth");
 
-        // 1. creating new customers of bank and adding new customer to bank's list of customers
-        new_customer.add_new_customer("1", "F. The First");
-        bank.add_new_customer_to_list_of_bank();
+        // 2. after creating many customers we try to search them in 'database',
+        // we find the printouts on the list 'Customers Database'
+        Customer_Bank customer_bank_ = new Customer_Bank();
+        customer_bank_.find_customer("2");
+        customer_bank_.find_customer("4");
 
-        new_customer.add_new_customer("2", "S. The Second");
-        bank.add_new_customer_to_list_of_bank();
+        // 3. then, we add the accounts to new customers, and we find printout on the 'List of customers and accounts'
+        customer_bank_.find_customer_and_add_account("1", "1111");
+        customer_bank_.find_customer_and_add_account("2", "2222");
+        customer_bank_.find_customer_and_add_account("3", "3333");
+        customer_bank_.find_customer_and_add_account("4", "4444");
+        customer_bank_.find_customer_and_add_account("5", "5555");
 
-        new_customer.add_new_customer("3", "T. The Third");
-        bank.add_new_customer_to_list_of_bank();
+        // 4. we check what the customer database looks like after adding the accounts, see printout 'Customers Database'
+        customer_bank_.find_customer("3");
+        customer_bank_.find_customer("1");
+        customer_bank_.find_customer("5");
 
-        new_customer.add_new_customer("4", "F. The Fourth");
-        bank.add_new_customer_to_list_of_bank();
 
-        new_customer.add_new_customer("5", "F. The Fifth");
-        bank.add_new_customer_to_list_of_bank();
-
-        // 2. after creating many customers we try to search them in 'database'
-        customer_account.find_customer("3");
-
-        //3. creating new account with assigning to specific customer
-        customer_account.find_customer_and_create_account_for_customer("1", "1001");
-        customer_account.find_customer_and_create_account_for_customer("2", "2002");
-        customer_account.find_customer_and_create_account_for_customer("3", "3003");
-        customer_account.find_customer_and_create_account_for_customer("4", "4004");
-        customer_account.find_customer_and_create_account_for_customer("5", "5005");
-
-        //tu skończyłem, należy teraz każde konto zasilić jakąś kwotą
-
-        /*// 2. creating new account for new customer
-        New_Account new_account = new New_Account();
-        new_account.create_account_number("1001", "1");
-
-        // 3. adding new customer to bank's list of customers
-        Bank bank = new Bank();
-        bank.add_new_customer_to_list_of_bank();
-
-        // 1'. creating 2nd customer of bank
-        new_customer.add_new_customer("2", "S.Second");
-
-        // 2'. creating second account for new customer
-        new_account.create_account_number("2002", "2");
-
-        // 3'. adding 2nd customer to bank's list of customers
-        bank.add_new_customer_to_list_of_bank();
-        */
-        //xxxxxxxxxxxxxx
 
     }
 
