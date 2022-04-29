@@ -94,6 +94,52 @@ public class Customer_Bank {
 
     }
 
+    public void find_customer_v02(String id, String funds){
+
+        System.out.println("\n* * * Find customer v02 * * *");
+
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        Customer customer = new Customer();
+        customer.setAccount_funds(funds);
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while (iterator.hasNext()){
+            String [] next = (String []) iterator.next();
+
+            if (next[0].equals(id)){
+
+                // - - - working code
+                int parseInt = Integer.parseInt(customer.getAccount_funds());
+                System.out.println("ParseInt: " + parseInt);
+                System.out.println("next[3]: " + next[3]);
+                int parseInt2 = Integer.parseInt(next[3]);
+                System.out.println("ParseInt2: " + parseInt2);
+                int i = parseInt + parseInt2;
+                System.out.println("i: " + i);
+                next[3] = String.valueOf(i);
+                // xxxxxxxxxx tu skończyłem, linijka poniżej nr 121 jest do usunięcia, blok working code trzeba jedynie oczyścić 
+                //next[3] = next[3] + customer.getAccount_funds();
+
+                System.out.println(
+                        "Customer: " +
+                                "id='" + next[0] + '\'' +
+                                ", full_name='" + next[1] + '\'' +
+                                ", account_number='" + next[2] + '\'' +
+                                ", account_funds='" + next[3] + '\'' +
+                                ", other_data='" + next[4] + '\''
+                );
+
+            }
+
+        }
+
+    }
+
+
+
+
+
     /*public void make_transfer_operation_between_customers(String id_client_ordering_transfer, String funds,
                                                           String id_client_receiving_transfer){
 

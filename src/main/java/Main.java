@@ -41,6 +41,16 @@ public class Main {
         customer_bank.find_customer("1");
         customer_bank.find_customer("5");
 
+        customer_bank.find_customer_v02("3", "3");
+        customer_bank.find_customer_v02("1", "1");
+        customer_bank.find_customer_v02("5", "5");
+
+        customer_bank.find_customer("3");
+        customer_bank.find_customer("1");
+        customer_bank.find_customer("5");
+
+
+
         //
         //customer_bank.make_transfer_operation_between_customers("5", "", "");
     }
