@@ -30,29 +30,38 @@ public class Main {
         customer_bank.find_customer("5");
 
         // 5. customers deposit funds into their accounts, see printout 'List of customers and funds in the accounts'
-        customer_bank.find_customer_and_perform_operation_deposit_on_account("1", "1000000");
-        customer_bank.find_customer_and_perform_operation_deposit_on_account("2", "2000000");
-        customer_bank.find_customer_and_perform_operation_deposit_on_account("3", "3000000");
-        customer_bank.find_customer_and_perform_operation_deposit_on_account("4", "4000000");
-        customer_bank.find_customer_and_perform_operation_deposit_on_account("5", "5000000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("1", "1000000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("2", "2000000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("3", "3000000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("4", "4000000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("5", "5000000");
 
         // 6. we randomly check the bank's customers again, see printout 'Customers Database'
         customer_bank.find_customer("3");
         customer_bank.find_customer("1");
         customer_bank.find_customer("5");
 
-        customer_bank.find_customer_v02("3", "3");
-        customer_bank.find_customer_v02("1", "1");
-        customer_bank.find_customer_v02("5", "5");
+        // 7. customers deposit additional funds in their accounts, see printout 'List of customers and funds in the accounts'
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("3", "3");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("1", "1");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("5", "5");
 
+        // 8. re-checking the funds on the customers' account after the transfer of additional funds, see printout 'Customers Database'
         customer_bank.find_customer("3");
         customer_bank.find_customer("1");
         customer_bank.find_customer("5");
 
+        // 9. suppose a customer wants to withdraw some cash
+        // 9 a. we check the client's funds before cash withdrawal, (printout 'Customer Database')
+        customer_bank.find_customer("2");
+        // 9 b. there are sufficient funds on the account, so we perform the operation (printout 'List of customers and funds in the accounts')
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("2", "-2");
+        // 9 c. re-checking the funds on the customers' account after cash withdrawal, (printout 'Customers Database')
+        customer_bank.find_customer("2");
 
+        // 10. transfers between customers
+        customer_bank.find_customers_and_make_transfers_between_customers("4", "-4", "2");
 
-        //
-        //customer_bank.make_transfer_operation_between_customers("5", "", "");
     }
 
 }

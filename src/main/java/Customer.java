@@ -5,7 +5,7 @@ public class Customer {
     public String id;
     public String full_name;
     public String account_number = "....";
-    public String account_funds = "....";
+    public String account_funds = "0";
     public String other_data = "....";
     public String[] customer_tab;
 
