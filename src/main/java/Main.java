@@ -59,8 +59,19 @@ public class Main {
         // 9 c. re-checking the funds on the customers' account after cash withdrawal, (printout 'Customers Database')
         customer_bank.find_customer("2");
 
-        // 10. transfers between customers
-        customer_bank.find_customers_and_make_transfers_between_customers("4", "-4", "2");
+        // 10. transfers between customers,
+        // before the transfer, the client with the id 4 has 4,000,000 and the client with the id 2 has 1,999,998
+        // the client with id 4 makes a transfer for the client with id 2 for the amount of 4
+        // after the transfer, client with id 4 has 3999996 in the account and client with id 2 has 2000002 in the account
+        customer_bank.find_customers_and_make_transfers_between_customers("4", "-4",
+                "2");
+
+        /*customer_bank.find_customer("1");
+        customer_bank.find_customer("2");
+        customer_bank.find_customer("3");
+        customer_bank.find_customer("4");
+        customer_bank.find_customer("5");
+        */
 
     }
 
