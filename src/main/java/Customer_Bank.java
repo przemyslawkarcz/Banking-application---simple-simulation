@@ -101,7 +101,7 @@ public class Customer_Bank {
 
     public void find_customers_and_make_transfers_between_customers(String id_of_client_ordering_transfer, String transfer_amount,
     String id_of_client_receiving_transfer) {
-        System.out.println("##################################################################");
+
         System.out.println("\n* * * List of customers and funds after transfers between customers * * *");
 
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
@@ -127,34 +127,66 @@ public class Customer_Bank {
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
-                                ", account_funds='" + next[3] + '\'' +
+                                ", account_before_transfer='" + parsedFunds02 + '\'' +
+                                ", amount_charged='" + parsedFunds01 + '\'' +
+                                ", account_after_transfer='" + next[3] + '\'' +
                                 ", other_data='" + next[4] + '\''
                 );
 
             }
 
         }
-        //xxxxxxxxxxxxxxxxxxxx
+
         int parsedTransferAmount = Integer.parseInt(transfer_amount);
         int parsedTransferAmountReversed = parsedTransferAmount * (-1);
         String transferAmountAsStringAgain = String.valueOf(parsedTransferAmountReversed);
 
-        Customer_Bank customer_bank = new Customer_Bank();
+        /*Customer_Bank customer_bank = new Customer_Bank();
         customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account(id_of_client_receiving_transfer,
                 transferAmountAsStringAgain);
+        */
+
+        Customer customer2 = new Customer();
+        customer2.setAccount_funds(transferAmountAsStringAgain);
+
+        Iterator<Object> iterator2 = bank_customer_list.iterator();
+        while (iterator2.hasNext()) {
+            String[] next = (String[]) iterator2.next();
+
+            if (next[0].equals(id_of_client_receiving_transfer)) {
+
+                //next[3] = customer.getAccount_funds();
+
+                int parsedFunds01 = Integer.parseInt(customer2.getAccount_funds());
+                int parsedFunds02 = Integer.parseInt(next[3]);
+                int fundsTotal = parsedFunds01 + parsedFunds02;
+                next[3] = String.valueOf(fundsTotal);
+
+                System.out.println(
+                        "Customer: " +
+                                "id='" + next[0] + '\'' +
+                                ", full_name='" + next[1] + '\'' +
+                                ", account_number='" + next[2] + '\'' +
+                                ", account_before_transfer='" + parsedFunds02 + '\'' +
+                                ", amount_received='" + parsedFunds01 + '\'' +
+                                ", account_after_transfer='" + next[3] + '\'' +
+                                ", other_data='" + next[4] + '\''
+                );
+
+            }
+
+        }
 
     }
 
+    public void edit_other_customer_details(String id, String other_data){
 
-    /*
-    public void find_customer_v02(String id, String funds){
-
-        System.out.println("\n* * * Find customer v02 * * *");
+        System.out.println("\n* * * New, edited OTHER customer data * * *");
 
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         Customer customer = new Customer();
-        customer.setAccount_funds(funds);
+        customer.setOther_data(other_data);
 
         Iterator<Object> iterator = bank_customer_list.iterator();
         while (iterator.hasNext()){
@@ -162,19 +194,7 @@ public class Customer_Bank {
 
             if (next[0].equals(id)){
 
-                // - - - working code
-                int parseInt = Integer.parseInt(customer.getAccount_funds());
-                System.out.println("ParseInt: " + parseInt);
-                System.out.println("next[3]: " + next[3]);
-                int parseInt2 = Integer.parseInt(next[3]);
-                System.out.println("ParseInt2: " + parseInt2);
-                int i = parseInt + parseInt2;
-                System.out.println("i: " + i);
-                next[3] = String.valueOf(i);
-                // xxxxxxxxxx tu skończyłem, linijka poniżej nr 121 jest do usunięcia, blok working code trzeba jedynie oczyścić
-                // dodawanie nowych wartości do konta udało się
-
-                //next[3] = next[3] + customer.getAccount_funds();
+                next[4] = customer.getOther_data();
 
                 System.out.println(
                         "Customer: " +
@@ -189,20 +209,24 @@ public class Customer_Bank {
 
         }
 
-    }*/
+    }
 
-    /*public void make_transfer_operation_between_customers(String id_client_ordering_transfer, String funds,
-                                                          String id_client_receiving_transfer){
+    public void edit_personal_customer_details_Name(String id, String new_personal_data){
 
-        System.out.println("\n* * * List of customers and funds after transfer operation * * *");
+        System.out.println("\n* * * New, edited PERSONAL customer data * * *");
 
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        Customer customer = new Customer();
+        customer.setFull_name(new_personal_data);
 
         Iterator<Object> iterator = bank_customer_list.iterator();
         while (iterator.hasNext()){
             String [] next = (String []) iterator.next();
 
-            if (next[0].equals(id_client_ordering_transfer)){
+            if (next[0].equals(id)){
+
+                next[1] = customer.getFull_name();
 
                 System.out.println(
                         "Customer: " +
@@ -217,6 +241,6 @@ public class Customer_Bank {
 
         }
 
-    }*/
+    }
 
 }

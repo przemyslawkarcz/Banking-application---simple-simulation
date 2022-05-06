@@ -63,15 +63,23 @@ public class Main {
         // before the transfer, the client with the id 4 has 4,000,000 and the client with the id 2 has 1,999,998
         // the client with id 4 makes a transfer for the client with id 2 for the amount of 4
         // after the transfer, client with id 4 has 3999996 in the account and client with id 2 has 2000002 in the account
+        // (printout 'List of customers and funds after transfers between customers')
         customer_bank.find_customers_and_make_transfers_between_customers("4", "-4",
                 "2");
-
-        /*customer_bank.find_customer("1");
+        // 10 a. we check clients after the transfer operation, (printout 'Customer Database')
         customer_bank.find_customer("2");
-        customer_bank.find_customer("3");
         customer_bank.find_customer("4");
+
+        // 11. let's assume that the client has changed some data, e.g. phone number and we are trying to update his data,
+        // see printout 'New, edited OTHER customer data'
+        customer_bank.edit_other_customer_details("5", "555-555-555");
+        // 11 a. here we check if the operation was successful, (printout 'Customer Database')
         customer_bank.find_customer("5");
-        */
+
+        // 12. let's assume that the client has changed some persona data, e.g. surname and we are trying to update his data,
+        // see printout 'New, edited PERSONAL customer data'
+        customer_bank.edit_personal_customer_details_Name("5", "Fi. Fifth-Quintan");
+
 
     }
 
