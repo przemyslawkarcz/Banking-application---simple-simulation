@@ -53,6 +53,8 @@ public class Customer_BankTest {
 
     // 1. dokończyć testy
     // 2. można by dodać do wybranych metod logi, które tworzyły by się automatycznie,
-    // logi te mogły by być podobne jak te z zadania CS
+    // logi te mogły by być podobne jak te z zadania CS, można by również
+    // zrobić tak aby te logi działały podobnie jak z zadania CS
+    // 3. uzupełnić plik README
 
 }
