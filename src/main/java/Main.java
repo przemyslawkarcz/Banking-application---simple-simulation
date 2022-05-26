@@ -72,7 +72,7 @@ public class Main {
 
         // 11. let's assume that the client has changed some data, e.g. phone number and we are trying to update his data,
         // see printout 'New, edited OTHER customer data'
-        customer_bank.edit_other_customer_details("5", "555-555-555");
+        customer_bank.edit_other_customer_details_Other_Data("5", "555-555-555");
         // 11 a. here we check if the operation was successful, (printout 'Customer Database')
         customer_bank.find_customer("5");
 

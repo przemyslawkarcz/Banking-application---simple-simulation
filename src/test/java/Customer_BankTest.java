@@ -11,9 +11,6 @@ public class Customer_BankTest {
         Customer customer = new Customer();
         customer.add_new_customer("11", "E. Eleventh");
 
-        //Customer_Bank customer_bank = new Customer_Bank();
-        //customer_bank.find_customer("11");
-
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         String[] next = new String[0];
@@ -33,9 +30,6 @@ public class Customer_BankTest {
 
         Customer customer = new Customer();
         customer.add_new_customer("12", "T. Twelfth");
-
-        //Customer_Bank customer_bank = new Customer_Bank();
-        //customer_bank.find_customer("11");
 
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
@@ -173,6 +167,109 @@ public class Customer_BankTest {
         }
 
         Assertions.assertEquals("900", next[3]);
+
+    }
+
+    @Test
+    public void find_customers_and_make_transfers_between_customers_test_02(){
+
+        Customer customer = new Customer();
+        customer.add_new_customer("12345678", "F. 1234567-eighth");
+        customer.add_new_customer("12345679", "F. 1234567-ninth");
+
+        Customer_Bank customer_bank = new Customer_Bank();
+        customer_bank.find_customer_and_add_account("12345678", "12345678");
+        customer_bank.find_customer_and_add_account("12345679", "12345679");
+
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("12345678", "1000");
+        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("12345679", "2000");
+
+        customer_bank.find_customers_and_make_transfers_between_customers("12345679", "-2000",
+                "12345678");
+
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        String[] next = new String[0];
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while (iterator.hasNext()){
+            next = (String[])iterator.next();
+
+        }
+
+        Assertions.assertNotEquals("1", next[3]);
+
+    }
+
+    @Test
+    public void edit_other_customer_details_Other_Data_test_01(){
+
+        Customer customer = new Customer();
+        customer.add_new_customer("111555777", "F. Seventh");
+
+        Customer_Bank customer_bank = new Customer_Bank();
+        customer_bank.edit_other_customer_details_Other_Data("111555777", "Mob: 999-888-777");
+
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        String[] next = new String[0];
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while (iterator.hasNext()){
+            next = (String[]) iterator.next();
+
+        }
+
+        Assertions.assertEquals("Mob: 999-888-777", next[4]);
+
+    }
+
+    @Test
+    public void edit_other_customer_details_Other_Data_test_02(){
+
+        Customer customer = new Customer();
+        customer.add_new_customer("111555777222", "F. Second");
+
+        Customer_Bank customer_bank = new Customer_Bank();
+        customer_bank.edit_other_customer_details_Other_Data("111555777222", "Mob: 999-888-222");
+
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        String[] next = new String[0];
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while (iterator.hasNext()){
+            next = (String[]) iterator.next();
+
+        }
+
+        Assertions.assertNotEquals("Mob: 999-888-2221", next[4]);
+
+    }
+
+
+
+
+    @Test
+    public void edit_personal_customer_details_Name_test_01(){
+
+        Customer customer = new Customer();
+        customer.add_new_customer("999888777", "N. Ninth-Eighth-Seventh");
+
+        Customer_Bank customer_bank = new Customer_Bank();
+        customer_bank.edit_personal_customer_details_Name("999888777", "N. Seventh");
+
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        String[] next = new String[0];
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while (iterator.hasNext()){
+            next = (String[]) iterator.next();
+
+        }
+
+        Assertions.assertEquals("N. Seventh", next[1]);
 
     }
 

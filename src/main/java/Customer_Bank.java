@@ -179,7 +179,7 @@ public class Customer_Bank {
 
     }
 
-    public void edit_other_customer_details(String id, String other_data){
+    public void edit_other_customer_details_Other_Data(String id, String other_data){
 
         System.out.println("\n* * * New, edited OTHER customer data * * *");
 
