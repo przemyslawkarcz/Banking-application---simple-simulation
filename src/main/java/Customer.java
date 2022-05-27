@@ -8,12 +8,14 @@ public class Customer {
     public String account_funds = "0";
     public String other_data = "....";
     public String[] customer_tab;
+    public String[] customer_log;
 
     public void add_new_customer(String id, String full_name) {
         this.id = id;
         this.full_name = full_name;
 
         customer_tab = new String[5];
+        customer_log = new String[5];
         customer_tab[0] = id;
         customer_tab[1] = full_name;
         customer_tab[2] = account_number;
@@ -21,6 +23,9 @@ public class Customer {
         customer_tab[4] = other_data;
 
         Bank.bank_customer_list.add(customer_tab);
+
+        //tu skończyłem xxxxxxxxxxxxxxxxxx 27.05 najlepiej będzie chyba tu napisać rdzeń metody o logu
+        Logs.generates_log_when_adding_new_customer(id);
 
         System.out.println("\n* * * List of all bank customers * * *");
 
