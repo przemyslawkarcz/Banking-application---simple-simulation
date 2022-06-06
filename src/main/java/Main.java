@@ -80,6 +80,8 @@ public class Main {
         // see printout 'New, edited PERSONAL customer data'
         customer_bank.edit_personal_customer_details_Name("5", "Fi. Fifth-Quintan");
 
+        //
+        customer.add_new_customer("322", "T. Twenty Second");
 
     }
 
