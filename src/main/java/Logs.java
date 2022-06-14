@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 public class Logs {
@@ -37,18 +35,11 @@ public class Logs {
 
         System.out.println("log record: " + log_record);
 
-        //tu skończyłem xxxxxxxxxxxxxxxxxxxxx 27.05
-
         //customer.customer_log[0] = log_record;
 
         //Bank.bank_customer_log_list.add(customer.customer_log);
 
     }
-
-
-
-
-
 
     public String[] getCustomer_log() {
         return customer_log;

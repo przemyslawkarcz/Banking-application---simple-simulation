@@ -76,12 +76,9 @@ public class Main {
         // 11 a. here we check if the operation was successful, (printout 'Customer Database')
         customer_bank.find_customer("5");
 
-        // 12. let's assume that the client has changed some persona data, e.g. surname and we are trying to update his data,
+        // 12. let's assume that the client has changed some personal data, e.g. surname and we are trying to update his data,
         // see printout 'New, edited PERSONAL customer data'
         customer_bank.edit_personal_customer_details_Name("5", "Fi. Fifth-Quintan");
-
-        //
-        customer.add_new_customer("322", "T. Twenty Second");
 
     }
 

@@ -48,7 +48,7 @@ public class Customer {
 
         // * * * log code block - the beginning * * *
 
-        customer_log = new String[5];
+        /*customer_log = new String[5];
 
         int generated_Log_Value = new Random().nextInt(1000000000);
 
@@ -74,7 +74,7 @@ public class Customer {
                             ", other_data='" + next[4] + '\''
             );
         }
-
+        */
         // * * * log code block - the end * * * 
 
     }
