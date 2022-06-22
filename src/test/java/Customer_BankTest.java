@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -247,9 +248,6 @@ public class Customer_BankTest {
 
     }
 
-
-
-
     @Test
     public void edit_personal_customer_details_Name_test_01(){
 
@@ -270,6 +268,32 @@ public class Customer_BankTest {
         }
 
         Assertions.assertEquals("N. Seventh", next[1]);
+
+    }
+
+    @Test
+    public void edit_personal_customer_details_Name_test_02(){
+
+        //given
+        Customer customer = new Customer();
+        customer.add_new_customer("999888111", "N. Ninth-Eighth-First");
+
+        //when
+        Customer_Bank customer_bank = new Customer_Bank();
+        customer_bank.edit_personal_customer_details_Name("999888111", "N. First");
+
+        //then
+        ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
+
+        String[] next = new String[0];
+
+        Iterator<Object> iterator = bank_customer_list.iterator();
+        while(iterator.hasNext()){
+            next = (String[]) iterator.next();
+
+        }
+
+        Assertions.assertNotEquals("N. Ninth-Eighth-First", next[1]);
 
     }
 
