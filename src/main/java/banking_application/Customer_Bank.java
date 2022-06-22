@@ -1,3 +1,5 @@
+package banking_application;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,7 +18,7 @@ public class Customer_Bank {
             if (next[0].equals(id)){
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -48,7 +50,7 @@ public class Customer_Bank {
                 next[2] = customer_.getAccount_number();
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -85,7 +87,7 @@ public class Customer_Bank {
                 next[3] = String.valueOf(fundsTotal);
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -121,7 +123,7 @@ public class Customer_Bank {
                 next[3] = String.valueOf(fundsTotal);
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -154,7 +156,7 @@ public class Customer_Bank {
                 next[3] = String.valueOf(fundsTotal);
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -188,7 +190,7 @@ public class Customer_Bank {
                 next[4] = customer.getOther_data();
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +
@@ -220,7 +222,7 @@ public class Customer_Bank {
                 next[1] = customer.getFull_name();
 
                 System.out.println(
-                        "Customer: " +
+                        "banking_application.Customer: " +
                                 "id='" + next[0] + '\'' +
                                 ", full_name='" + next[1] + '\'' +
                                 ", account_number='" + next[2] + '\'' +

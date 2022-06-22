@@ -1,3 +1,5 @@
+package banking_application;
+
 import java.util.Iterator;
 
 public class Customer {
@@ -30,7 +32,7 @@ public class Customer {
             String[] next = (String[]) iterator.next();
 
             System.out.println(
-                    "Customer: " +
+                    "banking_application.Customer: " +
                             "id='" + next[0] + '\'' +
                             ", full_name='" + next[1] + '\'' +
                             ", account_number='" + next[2] + '\'' +

@@ -1,3 +1,5 @@
+package banking_application;
+
 import java.util.ArrayList;
 
 public class Bank {

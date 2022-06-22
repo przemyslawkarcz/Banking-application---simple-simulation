@@ -1,3 +1,5 @@
+package banking_application;
+
 public class AppRunner {
 
     public static void main(String[] args) {
@@ -52,7 +54,7 @@ public class AppRunner {
         customer_bank.find_customer("5");
 
         // 9. suppose a customer wants to withdraw some cash
-        // 9 a. we check the client's funds before cash withdrawal, (printout 'Customer Database')
+        // 9 a. we check the client's funds before cash withdrawal, (printout 'banking_application.Customer Database')
         customer_bank.find_customer("2");
         // 9 b. there are sufficient funds on the account, so we perform the operation (printout 'List of customers and funds in the accounts')
         customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account("2", "-2");
@@ -66,14 +68,14 @@ public class AppRunner {
         // (printout 'List of customers and funds after transfers between customers')
         customer_bank.find_customers_and_make_transfers_between_customers("4", "-4",
                 "2");
-        // 10 a. we check clients after the transfer operation, (printout 'Customer Database')
+        // 10 a. we check clients after the transfer operation, (printout 'banking_application.Customer Database')
         customer_bank.find_customer("2");
         customer_bank.find_customer("4");
 
         // 11. let's assume that the client has changed some data, e.g. phone number and we are trying to update his data,
         // see printout 'New, edited OTHER customer data'
         customer_bank.edit_other_customer_details_Other_Data("5", "555-555-555");
-        // 11 a. here we check if the operation was successful, (printout 'Customer Database')
+        // 11 a. here we check if the operation was successful, (printout 'banking_application.Customer Database')
         customer_bank.find_customer("5");
 
         // 12. let's assume that the client has changed some personal data, e.g. surname and we are trying to update his data,
