@@ -8,12 +8,15 @@ public class CustomerTest {
     @Test
     public void add_new_customer_test_01(){
 
+        //given
         String id = "12345678";
         String full_name = "abcdefgh";
 
+        //when
         Customer customer = new Customer();
         customer.add_new_customer(id, full_name);
 
+        //then
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         String [] next = new String[0];
@@ -31,12 +34,15 @@ public class CustomerTest {
     @Test
     public void add_new_customer_test_02(){
 
+        //given
         String id = "12345678";
         String full_name = "abcdefgh";
 
+        //when
         Customer customer = new Customer();
         customer.add_new_customer(id, full_name);
 
+        //then
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         String [] next = new String[0];
@@ -54,12 +60,15 @@ public class CustomerTest {
     @Test
     public void add_new_customer_test_03(){
 
+        //given
         String id = "12345678";
         String full_name = "abcdefgh";
 
+        //when
         Customer customer = new Customer();
         customer.add_new_customer(id, full_name);
 
+        //then
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         String [] next = new String[0];
@@ -77,12 +86,15 @@ public class CustomerTest {
     @Test
     public void add_new_customer_test_04(){
 
+        //given
         String id = "12345678";
         String full_name = "abcdefgh";
 
+        //when
         Customer customer = new Customer();
         customer.add_new_customer(id, full_name);
 
+        //then
         ArrayList<Object> bank_customer_list = Bank.getBank_customer_list();
 
         String [] next = new String[0];
