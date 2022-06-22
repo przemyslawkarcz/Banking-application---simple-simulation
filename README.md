@@ -10,7 +10,7 @@ The purpose of the application is to model selected simple banking processes, su
 - making transfers between clients,
 - searching for clients by 'id' number.
 
-To start, go to the Main class, where the individual 
+To start, go to the AppRunner class, where the individual 
 stages of work with clients and accounts are described.
 
 Technologies used in the project are: IDE - IntelliJ Idea Community; Maven; Java - 1.8; TDD.
