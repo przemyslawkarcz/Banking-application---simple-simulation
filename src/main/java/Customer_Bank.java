@@ -115,8 +115,6 @@ public class Customer_Bank {
 
             if (next[0].equals(id_of_client_ordering_transfer)) {
 
-                //next[3] = customer.getAccount_funds();
-
                 int parsedFunds01 = Integer.parseInt(customer.getAccount_funds());
                 int parsedFunds02 = Integer.parseInt(next[3]);
                 int fundsTotal = parsedFunds01 + parsedFunds02;
@@ -141,11 +139,6 @@ public class Customer_Bank {
         int parsedTransferAmountReversed = parsedTransferAmount * (-1);
         String transferAmountAsStringAgain = String.valueOf(parsedTransferAmountReversed);
 
-        /*Customer_Bank customer_bank = new Customer_Bank();
-        customer_bank.find_customer_and_perform_operation_deposit_withdrawal_from_account(id_of_client_receiving_transfer,
-                transferAmountAsStringAgain);
-        */
-
         Customer customer2 = new Customer();
         customer2.setAccount_funds(transferAmountAsStringAgain);
 
@@ -154,8 +147,6 @@ public class Customer_Bank {
             String[] next = (String[]) iterator2.next();
 
             if (next[0].equals(id_of_client_receiving_transfer)) {
-
-                //next[3] = customer.getAccount_funds();
 
                 int parsedFunds01 = Integer.parseInt(customer2.getAccount_funds());
                 int parsedFunds02 = Integer.parseInt(next[3]);

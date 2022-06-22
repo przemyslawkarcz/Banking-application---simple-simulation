@@ -1,5 +1,4 @@
 import java.util.Iterator;
-import java.util.Random;
 
 public class Customer {
 
@@ -9,11 +8,8 @@ public class Customer {
     public String account_funds = "0";
     public String other_data = "....";
     public String[] customer_tab;
-    public String[] customer_log;
 
     public void add_new_customer(String id, String full_name) {
-
-        // # # # customer code block - the beginning # # #
 
         this.id = id;
         this.full_name = full_name;
@@ -43,39 +39,6 @@ public class Customer {
             );
 
         }
-
-        // # # # customer code block - the end # # #
-
-        // * * * log code block - the beginning * * *
-
-        /*customer_log = new String[5];
-
-        int generated_Log_Value = new Random().nextInt(1000000000);
-
-        String generated_Log_Value_parsed = String.valueOf(generated_Log_Value);
-
-        String log_record = "000".concat(id).concat("-").concat(generated_Log_Value_parsed).concat("-").concat("000").concat(id);
-
-        customer_log[0] = log_record;
-
-        Bank.bank_customer_log_list.add(customer_log);
-
-        Iterator<Object> iterator_log = Bank.bank_customer_log_list.iterator();
-
-        while (iterator_log.hasNext()){
-            String[] next = (String[]) iterator_log.next();
-
-            System.out.println(
-                    "Customer logs: " +
-                            "client id added log='" + next[0] + '\'' +
-                            ", client f.name added log='" + next[1] + '\'' +
-                            ", client account no. added log='" + next[2] + '\'' +
-                            ", client funds added log='" + next[3] + '\'' +
-                            ", other_data='" + next[4] + '\''
-            );
-        }
-        */
-        // * * * log code block - the end * * * 
 
     }
 
