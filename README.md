@@ -1,6 +1,6 @@
 # Banking-application---simple-simulation
 
-Banking-application---simple-simulation is a junior level demo application written in Java 1.8.
+Banking-application---simple-simulation is a junior level application written in Java 1.8.
 
 The purpose of the application is to model selected simple banking processes, such as:
 - adding new customers,
@@ -10,10 +10,10 @@ The purpose of the application is to model selected simple banking processes, su
 - making transfers between clients,
 - searching for clients by 'id' number.
 
-To start, go to the banking_application.AppRunner class, where the individual 
-stages of work with clients and accounts are described.
+To start, go to the AppRunner class, where the individual 
+stages of work with clients and accounts are described as a simple scenario.
 
-Technologies used in the project are: IDE - IntelliJ Idea Community; Maven; Java - 1.8; TDD.
+Technologies used in the project are: IDE - IntelliJ Idea Community; Maven; Java - 1.8; TDD, Clean Code.
 
 Contact data:
 
